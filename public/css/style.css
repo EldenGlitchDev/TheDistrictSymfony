@@ -1,0 +1,271 @@
+/*INDEX*/
+
+body{
+    background-color: #29334B;
+
+}
+
+.boutonderoulant{
+    background-color: #E3A592;
+}
+
+.couleurbouton{
+    color: #E3A592;
+    font-size: 30px;
+    font-family:Georgia, serif;
+}
+
+#recherche{
+    position: relative;
+    top:260px;
+    left: 550px;
+    background-color:#62426D;
+    border:solid;
+    border:3px solid;
+    border-color: black;
+    color:#E3A592;
+    border-radius: 10px;
+    margin-top: -40px;
+}
+
+#video{
+    width: 1320px;
+    height: 300px;
+    margin-top: -8px;
+}
+
+.pCouleurtxt{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:25px;
+    font-weight: bold;
+    text-align: center;
+    filter:drop-shadow(10px 3px 4px #a14529);
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#bandereaubas{
+    width: 558px;
+    height: 150px;
+}
+
+.logoFooter{
+    width: 50px;
+    height: 50px;
+    margin-top: 60px;
+}
+
+.mentionsLegPolConf{
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.parallax{
+    background-image: url(../img/bunch-pasta-ingredients.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -50;
+    margin-top: 0%;
+}
+
+.animeimage{
+    transition: 0.5s ease;
+}
+
+.animeimage:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+.posImage{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    border-color: rgb(0, 0, 0);
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    text-decoration: none;
+    color:#E3A592;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color:#E3A592;
+    font-family: Georgia, serif;
+}
+
+.backgroundTitle{
+    background-color: black;
+}
+
+#imageBandereau{
+    width: 1320px;
+    height: 300px;
+}
+
+
+/*CATEGORIES*/
+
+.bprecsuiv{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    background-color: #62426D;
+    border-color: black;
+}
+
+.posImage{
+    width: 280px;
+    height: 280px;
+    border-radius: 50px;
+    border:solid;
+    border:10px solid;
+    border-color: rgb(0, 0, 0);
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*TOUS LES PLATS*/
+
+.cardscolor{
+    background-color: #360E44 ;
+}
+
+.txtcolor{
+    color:white;
+}
+
+#boutoncommander{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#imageTouslesPlats{
+    width: 1320px;
+    height: 320px;
+}
+
+
+/*CONTACT*/
+
+#background-img{
+    background-image: url(../img/ibg.jpg);
+    background-size: cover;
+}
+
+#couleurtxt{
+    color: #F50B0B;
+    font-family: Georgia, serif;
+    font-size:12px;
+    font-weight: bold;
+}
+
+.coordonneesCSS{
+    font-family: Georgia, serif;
+    font-size:20px;
+    font-weight: bold;
+}
+
+
+/*COMMANDE*/
+
+#rectangleviolet{
+    background-color: #62426D;
+    border:solid;
+    border:2px solid;
+    height: auto;
+    width: 700px;
+    
+}
+
+.coordonneesCSS{
+    font-family: Georgia, serif;
+    font-size:20px;
+    font-weight: bold;
+}
+
+.quantite{
+    margin-left: 487px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.barrequantite{
+    margin-left: 520px;
+    margin-top: 20px;
+}
+
+.imageComm{
+    width: 1320px;
+    height: 320px;
+}
+
+/*PLATS PAR CATEGORIES*/
+
+#titre{
+    background-color: #62426D;
+    border:2px solid;
+    border-radius: 8px;
+    color:#E3A592;
+    font-family: Georgia, serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+#boutoncommander{
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.titreconteneur{
+    width:2000px;
+  min-height:15px;
+}
+
+
+/*MENTIONS LEGALES ET POLITIQUE DE CONFIDENTIALITE*/
+
+body{
+    background-color: #29334B;
+
+}
+
+.paragraphePolMen, .listePolMen{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:19px;
+    text-align: justify;
+}
+
+h2, h3{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:25px;
+    font-weight: bold;
+    text-align: start;
+}
+
+hr{
+    border: 1px solid #E3A592;
+}
+
+.titrePolMen{
+    color:#E3A592;
+}
