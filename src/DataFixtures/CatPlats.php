@@ -17,7 +17,7 @@ class CatPlats extends Fixture
 
         $categoriePizza = new Categorie();
         $categoriePizza->setLibelle("Pizza");
-        $categoriePizza->setImage("/img/pizza_cat.jpg");
+        $categoriePizza->setImage("pizza_cat.jpg");
         $categoriePizza->setActive("Yes");
         $manager->persist($categoriePizza); //permet de spécifier à doctrine que l'entité $categoriePizza doit être persisté
 
@@ -25,7 +25,7 @@ class CatPlats extends Fixture
 
         $categorieBurger = new Categorie();
         $categorieBurger->setLibelle("Burger");
-        $categorieBurger->setImage("/img/burger_cat.jpg");
+        $categorieBurger->setImage("burger_cat.jpg");
         $categorieBurger->setActive("Yes");
         $manager->persist($categorieBurger);
 
@@ -33,7 +33,7 @@ class CatPlats extends Fixture
 
         $categorieWraps = new Categorie();
         $categorieWraps->setLibelle("Wraps");
-        $categorieWraps->setImage("/img/wrap_cat.jpg");
+        $categorieWraps->setImage("wrap_cat.jpg");
         $categorieWraps->setActive("Yes");
         $manager->persist($categorieWraps);
 
@@ -41,7 +41,7 @@ class CatPlats extends Fixture
 
         $categoriePasta = new Categorie();
         $categoriePasta->setLibelle("Pasta");
-        $categoriePasta->setImage("/img/pasta_cat.jpg");
+        $categoriePasta->setImage("pasta_cat.jpg");
         $categoriePasta->setActive("Yes");
         $manager->persist($categoriePasta);
 
@@ -49,7 +49,7 @@ class CatPlats extends Fixture
 
         $categorieSandwich = new Categorie();
         $categorieSandwich->setLibelle("Sandwich");
-        $categorieSandwich->setImage("/img/sandwich_cat.jpg");
+        $categorieSandwich->setImage("sandwich_cat.jpg");
         $categorieSandwich->setActive("Yes");
         $manager->persist($categorieSandwich);
 
@@ -57,7 +57,7 @@ class CatPlats extends Fixture
 
         $categorieSalade = new Categorie();
         $categorieSalade->setLibelle("Salade");
-        $categorieSalade->setImage("/img/salade_cat.jpg");
+        $categorieSalade->setImage("salade_cat.jpg");
         $categorieSalade->setActive("Yes");
         $manager->persist($categorieSalade);
 
@@ -71,7 +71,7 @@ class CatPlats extends Fixture
         $platPizzaBianca->setLibelle("Pizza Bianca");
         $platPizzaBianca->setDescription("Une pizza fine et croustillante garnie de crème mascarpone légèrement citronnée et de tranches de saumon fumé, le tout relevé de baies roses et de basilic frais.");
         $platPizzaBianca->setPrix("14.00");
-        $platPizzaBianca->setImage("/img/pizza-salmon.png");
+        $platPizzaBianca->setImage("pizza-salmon.png");
         $platPizzaBianca->setActive("Yes");
         $manager->persist($platPizzaBianca);
 
@@ -81,7 +81,7 @@ class CatPlats extends Fixture
         $platPizzaMargherita->setLibelle("Pizza Margherita");
         $platPizzaMargherita->setDescription("Une authentique pizza margarita, un classique de la cuisine italienne! Une pâte faite maison, une sauce tomate fraîche, de la mozzarella Fior di latte, du basilic, origan, ail, sucre, sel & poivre...");
         $platPizzaMargherita->setPrix("14.00");
-        $platPizzaMargherita->setImage("/img/pizza-margherita.jpg");
+        $platPizzaMargherita->setImage("pizza-margherita.jpg");
         $platPizzaMargherita->setActive("Yes");
         $manager->persist($platPizzaMargherita);
 
@@ -91,7 +91,7 @@ class CatPlats extends Fixture
         $platDistrictBurger->setLibelle("District Burger");
         $platDistrictBurger->setDescription("Burger composé d’un bun’s du boulanger, deux steaks de 80g (origine française), de deux tranches poitrine de porc fumée, de deux tranches cheddar affiné, salade et oignons confits...");
         $platDistrictBurger->setPrix("8.00");
-        $platDistrictBurger->setImage("/img/hamburger.jpg");
+        $platDistrictBurger->setImage("hamburger.jpg");
         $platDistrictBurger->setActive("Yes");
         $manager->persist($platDistrictBurger);
 
@@ -101,7 +101,7 @@ class CatPlats extends Fixture
         $platCheesburger->setLibelle("Cheeseburger");
         $platCheesburger->setDescription("Burger composé d’un bun’s du boulanger, de salade, oignons rouges, pickles, oignon confit, tomate, d’un steak d’origine Française, d’une tranche de cheddar affiné, et de notre sauce maison.");
         $platCheesburger->setPrix("8.00");
-        $platCheesburger->setImage("/img/cheesburger.jpg");
+        $platCheesburger->setImage("cheesburger.jpg");
         $platCheesburger->setActive("Yes");
         $manager->persist($platCheesburger);
 
@@ -111,7 +111,7 @@ class CatPlats extends Fixture
         $platBuffaloChickenWrap->setLibelle("Buffalo Chicken Wrap");
         $platBuffaloChickenWrap->setDescription("Du bon filet de poulet mariné dans notre spécialité sucrée & épicée, enveloppé dans une tortilla blanche douce faite maison.");
         $platBuffaloChickenWrap->setPrix("5.00");
-        $platBuffaloChickenWrap->setImage("/img/buffalo-chicken.webp");
+        $platBuffaloChickenWrap->setImage("buffalo-chicken.webp");
         $platBuffaloChickenWrap->setActive("Yes");
         $manager->persist($platBuffaloChickenWrap);
 
@@ -121,7 +121,7 @@ class CatPlats extends Fixture
         $platSpaghettiLegumes->setLibelle("Spaghetti aux légumes");
         $platSpaghettiLegumes->setDescription("Un plat de spaghetti au pesto de basilic et légumes poêlés, très parfumé et rapide.");
         $platSpaghettiLegumes->setPrix("10.00");
-        $platSpaghettiLegumes->setImage("/img/spaghetti-legumes.jpg");
+        $platSpaghettiLegumes->setImage("spaghetti-legumes.jpg");
         $platSpaghettiLegumes->setActive("Yes");
         $manager->persist($platSpaghettiLegumes);
 
@@ -131,7 +131,7 @@ class CatPlats extends Fixture
         $platsLasagnes->setLibelle("Lasagnes");
         $platsLasagnes->setDescription("Découvrez notre recette des lasagnes, l'une des spécialités italiennes que tout le monde aime avec sa viande hachée et gratinée à l'emmental. Et bien sûr, une inoubliable béchamel à la noix de muscade.");
         $platsLasagnes->setPrix("12.00");
-        $platsLasagnes->setImage("/img/lasagnes_viande.jpg");
+        $platsLasagnes->setImage("lasagnes_viande.jpg");
         $platsLasagnes->setActive("Yes");
         $manager->persist($platsLasagnes);
 
@@ -141,7 +141,7 @@ class CatPlats extends Fixture
         $platsTagliatellesSaumon->setLibelle("Tagliatelles au saumon");
         $platsTagliatellesSaumon->setDescription("Découvrez notre recette délicieuse de tagliatelles au saumon frais et à la crème qui qui vous assure un véritable régal !");
         $platsTagliatellesSaumon->setPrix("12.00");
-        $platsTagliatellesSaumon->setImage("/img/tagliatelles_saumon.webp");
+        $platsTagliatellesSaumon->setImage("tagliatelles_saumon.webp");
         $platsTagliatellesSaumon->setActive("Yes");
         $manager->persist($platsTagliatellesSaumon);
 
@@ -151,7 +151,7 @@ class CatPlats extends Fixture
         $platsSaladeCesar->setLibelle("Salade César");
         $platsSaladeCesar->setDescription("Une délicieuse salade Caesar (César) composée de filets de poulet grillés, de feuilles croquantes de salade romaine, de croutons à l'ail, de tomates cerise et surtout de sa fameuse sauce Caesar. Le tout agrémenté de copeaux de parmesan.");
         $platsSaladeCesar->setPrix("7.00");
-        $platsSaladeCesar->setImage("/img/cesar_salade.jpg");
+        $platsSaladeCesar->setImage("cesar_salade.jpg");
         $platsSaladeCesar->setActive("Yes");
         $manager->persist($platsSaladeCesar);
 
