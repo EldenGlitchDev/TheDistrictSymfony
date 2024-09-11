@@ -15,4 +15,29 @@ class CatalogueController extends AbstractController
             'controller_name' => 'CatalogueController',
         ]);
     }
+
+    #[Route('/panier', name: 'app_panier')]
+    public function panier(): Response
+    {
+        return $this->render('catalogue/panier.html.twig', [
+            'controller_name' => 'PanierController',
+        ]);
+    }
+
+    #[Route('/commande', name: 'app_commande')]
+    public function commande(): Response
+    {
+        return $this->render('catalogue/commande.html.twig', [
+            'controller_name' => 'CommandeController',
+        ]);
+    }
+
+    #[Route('/contact', name: 'app_contact')]
+    public function contact(): Response
+    {
+        return $this->render('catalogue/contact.html.twig', [
+            'controller_name' => 'ContactController',
+        ]);
+    }
+
 }
