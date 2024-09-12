@@ -2,10 +2,9 @@
 
 body{
     background-color: #29334B;
-
 }
 
-.boutonderoulant{
+/*.boutonderoulant{
     background-color: #E3A592;
 }
 
@@ -26,15 +25,14 @@ body{
     color:#E3A592;
     border-radius: 10px;
     margin-top: -40px;
-}
+}*/
 
 #video{
-    width: 1320px;
-    height: 300px;
-    margin-top: -8px;
+    width: 1850px;
+    height: 350px;
 }
 
-.pCouleurtxt{
+/*.pCouleurtxt{
     color:#E3A592;
     font-family: Georgia, serif;
     font-size:25px;
@@ -111,11 +109,11 @@ h1{
 
 .backgroundTitle{
     background-color: black;
-}
+}*/
 
 #imageBandereau{
-    width: 1320px;
-    height: 300px;
+    width: 1850px;
+    height: 350px;
 }
 
 .panier{

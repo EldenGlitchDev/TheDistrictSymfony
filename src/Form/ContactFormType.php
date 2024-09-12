@@ -17,7 +17,8 @@ class ContactFormType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class, [
-                'required' => true
+                'required' => true,
+                'label' => 'Nom*'
                 ])
             ->add('prenom', TextType::class, [
                 'required' => false,
@@ -25,16 +26,17 @@ class ContactFormType extends AbstractType
             ])
             ->add('email', EmailType::class, [
                 'required' => true,
+                'label' => 'Email*'
             ])
             ->add('telephone', TextType::class, [
                 'required' => true,
-                'label' => 'Téléphone'
+                'label' => 'Téléphone*'
             ])
-            ->add('Votre_demande', TextareaType::class, [
+            ->add('votre_demande', TextareaType::class, [
                 'required' => true,
-                'label' => 'Votre demande'
+                'label' => 'Votre demande*'
             ])
-            ->add('save', SubmitType::class, [
+            ->add('envoyer', SubmitType::class, [
                 'label' => 'Envoyer'])
 
         ;
