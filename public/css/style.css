@@ -113,7 +113,7 @@ h1{
 
 #imageBandereau{
     width: 1850px;
-    height: 350px;
+    height: 300px;
 }
 
 .panier{
@@ -171,18 +171,19 @@ h1{
     background-size: cover;
 }
 
-#couleurtxt{
+/*#couleurtxt{
     color: #F50B0B;
     font-family: Georgia, serif;
     font-size:12px;
     font-weight: bold;
-}
+}*/
 
-.coordonneesCSS{
+/*.coordonneesCSS{
     font-family: Georgia, serif;
     font-size:20px;
     font-weight: bold;
-}
+}*/
+
 
 
 /*COMMANDE*/

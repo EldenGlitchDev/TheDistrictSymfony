@@ -1,64 +1,67 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}Contact
+{% endblock %}
 
 {% block body %}
 
-<div class="container">
-    <div class="row g-0">
-      <img src="/img/bg1.jpeg" alt="bandereau" title="bandereau" id="imageBandereau" >
-    </div>
-</div>
+	<div class="container">
+		<div class="row g-0">
+			<img src="/img/bg1.jpeg" alt="bandereau" title="bandereau" id="imageBandereau">
+		</div>
+	</div>
 
-<div class="container">
-<p class="row g-0 mt-2">Les champs ayant une "*" sont obligatoires à remplir !</p>
-</div>
-
-<div class="container">
-    <div class="row">
+	<section class="container" id="background-img">
+		<div class="row g-0">
 
 
-    {{ form_start(form) }}
+			<div class="container">
+				<div class="row">
 
-    <div class="class-for-errors">
-        {{ form_errors(form) }}
-    </div>
+					<p class="row g-0 mt-5 pt-5 fs-4 mx-3 text-danger justify-content-start">Les champs ayant une "*" sont obligatoires à remplir !</p>
 
-<div class="container">
-    <div class="row">
-    {{ form_label(form.nom) }} {{ form_widget(form.nom) }}
-    {{ form_label(form.prenom) }} {{ form_widget(form.prenom) }}
-    </div>
-</div>
+					{{ form_start(form) }}
 
-    <div class="row justify-content-center">
-        {{ form_row(form.email) }}
-    </div>
-
-    <div class="row justify-content-center">
-        {{ form_row(form.telephone) }}
-    </div>
-
-    <div class="row justify-content-center">
-        {{ form_row(form.votre_demande) }}
-    </div>
-
-    <div class="row justify-content-center">
-        {{ form_row(form.envoyer) }}
-    </div>
+					<div class="class-for-errors">
+						{{ form_errors(form) }}
+					</div>
 
 
-    </div>
+					<div class="mb-3 col-12 fs-5 text-center">
+						{{ form_label(form.nom) }}
+						{{ form_widget(form.nom) }}
+						{{ form_label(form.prenom) }}
+						{{ form_widget(form.prenom) }}
+					</div>
 
 
+					<div class="mb-3 col-12 fs-5 text-center">
+						{{ form_label(form.email) }}
+						{{ form_widget(form.email) }}
+						{{ form_label(form.telephone) }}
+						{{ form_widget(form.telephone) }}
+					</div>
+
+					<div class="row mx-1 fs-5 col-12 text-center">
+						{{ form_label(form.votre_demande) }}
+						{{ form_widget(form.votre_demande) }}
+					</div>
+
+					<div class="container">
+						<div class="row mt-3 text-end">
+							{{ form_row(form.envoyer) }}
+						</div>
+					</div>
 
 
-    </div>
+				</div>
 
 
+			</div>
 
-    {{ form_end(form) }}
 
-    </div>
-</div>
-{% endblock %}
+			{{ form_end(form) }}
+
+		</div>
+	</section>
+</div>{% endblock %}
