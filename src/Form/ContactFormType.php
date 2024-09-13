@@ -18,23 +18,28 @@ class ContactFormType extends AbstractType
         $builder
             ->add('nom', TextType::class, [
                 'required' => true,
-                'label' => 'Nom*'
+                'label' => 'Nom*',
+                'label_attr' => ['id' => 'label_form']
                 ])
             ->add('prenom', TextType::class, [
                 'required' => false,
-                'label' => 'Prénom'
+                'label' => 'Prénom',
+                'label_attr' => ['id' => 'label_form']
             ])
             ->add('email', EmailType::class, [
                 'required' => true,
-                'label' => 'Email*'
+                'label' => 'Email*',
+                'label_attr' => ['id' => 'label_form']
             ])
             ->add('telephone', TextType::class, [
                 'required' => true,
-                'label' => 'Téléphone*'
+                'label' => 'Téléphone*',
+                'label_attr' => ['id' => 'label_form']
             ])
             ->add('votre_demande', TextareaType::class, [
                 'required' => true,
-                'label' => 'Votre demande*'
+                'label' => 'Votre demande*',
+                'label_attr' => ['id' => 'label_form']
             ])
             ->add('envoyer', SubmitType::class, [
                 'label' => 'Envoyer'])
