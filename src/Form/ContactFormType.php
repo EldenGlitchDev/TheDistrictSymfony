@@ -36,7 +36,7 @@ class ContactFormType extends AbstractType
                 'label' => 'Téléphone*',
                 'label_attr' => ['id' => 'label_form']
             ])
-            ->add('votre_demande', TextareaType::class, [
+            ->add('demande', TextareaType::class, [
                 'required' => true,
                 'label' => 'Votre demande*',
                 'label_attr' => ['id' => 'label_form']
