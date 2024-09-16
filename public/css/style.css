@@ -32,7 +32,7 @@ body{
     height: 350px;
 }
 
-/*.pCouleurtxt{
+.pCouleurtxt{
     color:#E3A592;
     font-family: Georgia, serif;
     font-size:25px;
@@ -42,7 +42,7 @@ body{
     background-color: black;
     border-radius: 20px;
     margin-top: 5px;
-}*/
+}
 
 #bandereaubas{
     width: 558px;
@@ -60,7 +60,7 @@ body{
     font-weight: bold;
 }
 
-/*.parallax{
+.parallax{
     background-image: url(../img/bunch-pasta-ingredients.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -70,7 +70,7 @@ body{
     align-items: center;
     z-index: -50;
     margin-top: 0%;
-}*/
+}
 
 .animeimage{
     transition: 0.5s ease;

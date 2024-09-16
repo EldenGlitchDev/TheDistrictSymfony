@@ -64,7 +64,7 @@ class CatalogueController extends AbstractController
 
         return $this->render('catalogue/categorie.html.twig', [
             'controller_name' => 'CatalogueController',
-            'categorie' => $categorie,
+            'categories' => $categorie,
         ]);
     }
 
@@ -87,6 +87,26 @@ class CatalogueController extends AbstractController
         return $this->render('catalogue/panier.html.twig', [
             'controller_name' => 'PanierController',
         ]);
+    }
+
+    #Route pour mentions légales
+
+    #[Route('/mentions_legales', name:'app_mentions_leg')]
+    public function mentionLeg(): Response
+    {
+        return $this->render('catalogue\mentions_legales.html.twig', [
+            'controller_name' => 'MentionsLegController',
+            ] );
+    }
+
+    #Route pour politique de confidentialité
+
+    #[Route('/pol_conf', name:'app_pol_conf')]
+    public function polConf(): Response
+    {
+        return $this->render('catalogue\pol_conf.html.twig', [
+            'controller_name' => 'PolConfController',
+            ] );
     }
 
 }

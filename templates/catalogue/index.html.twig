@@ -1,29 +1,48 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Accueil
+{% endblock %}
 
 {% block body %}
 
-<div class="container">
-    <div class="row g-0">
-        <video src="/img/852299-hd_1280_720_30fps.mp4" loop autoplay muted alt="video_pizza" title="bandereau" id="video" class="object-fit-cover">
-    </div>
-</div>
+	<div class="container">
+		<div class="row g-0">
+			<video src="/img/852299-hd_1280_720_30fps.mp4" loop autoplay muted alt="video_pizza" title="bandereau" id="video" class="object-fit-cover"></div>
+		</div>
+
+		<div class="container">
+			<div class="parallax col-12 col-sm-12">
+
+				<div class="container">
+					<div class="row">
+
+						<div class="backgroundTitle mb-3">
+							<h1>Les catégories</h1>
+						</div>
+
+						{% for categorie in categories %}
+
+							<div class="col-sm-12 col-lg-4">
+								<a href="{{ path ('app_platcat', {categorie_id: categorie.id} ) }}">
+									<img src="{{ asset ('/img/category/' ~ categorie.image) }}" class="animeimage posImage" alt="{{ categorie.libelle }}">
+                                    <div class="row justify-content-center">
+									<p class="pCouleurtxt col-7">{{ categorie.libelle }}</p>
+                                    </div>
+								</a>
+							</div>
+
+						{% endfor %}
+
+                        
 
 
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/delplanque/Documents/DEV APPLIS/TheDistrict/src/Controller/AccueilController.php</code></li>
-        <li>Your template at <code>/home/delplanque/Documents/DEV APPLIS/TheDistrict/templates/panier/index.html.twig</code></li>
-    </ul>
-</div>
 
-{% endblock %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endblock %}
