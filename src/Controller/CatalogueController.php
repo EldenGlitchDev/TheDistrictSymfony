@@ -45,7 +45,7 @@ class CatalogueController extends AbstractController
         ]);
     }
 
-    #[Route('/plats/categorie_id', name: 'app_platcat', requirements: ['categorie_id' => '\d+'])]
+    #[Route('/plats/{categorie_id}', name: 'app_platcat', requirements: ['categorie_id' => '\d+'])]
     public function showplatscat(int $categorie_id): Response
     {
         $categorie = $this->categorieRepository->find($categorie_id);
