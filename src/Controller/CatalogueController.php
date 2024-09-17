@@ -21,7 +21,7 @@ class CatalogueController extends AbstractController
     }
 
 
-    #[Route('/index', name: 'app_index')]
+    #[Route('/', name: 'app_index')]
     public function index(): Response
     {
         $categories = $this->categorieRepository->findAll();

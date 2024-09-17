@@ -151,7 +151,7 @@ class CatPlats extends Fixture
         $platsSaladeCesar->setLibelle("Salade César");
         $platsSaladeCesar->setDescription("Une délicieuse salade Caesar (César) composée de filets de poulet grillés, de feuilles croquantes de salade romaine, de croutons à l'ail, de tomates cerise et surtout de sa fameuse sauce Caesar. Le tout agrémenté de copeaux de parmesan.");
         $platsSaladeCesar->setPrix("7.00");
-        $platsSaladeCesar->setImage("cesar_salade.jpg");
+        $platsSaladeCesar->setImage("cesar_salad.jpg");
         $platsSaladeCesar->setActive("Yes");
         $manager->persist($platsSaladeCesar);
 

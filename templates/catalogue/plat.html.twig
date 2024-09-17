@@ -1,20 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Tous les plats{% endblock %}
+{% block title %}Tous les plats
+{% endblock %}
 
 {% block body %}
 
-<div class="container">
+	<div class="container">
 		<div class="row g-0">
 			<img src="/img/bg1.jpeg" alt="bandereau" title="bandereau" id="imageBandereau">
 		</div>
 	</div><br>
 
-{% for plats in plat %}
+	<div class="container">
+		<div class="row justify-content-center">
 
+			{% for plat in plats %}
 
+				<div class="col-md-6">
+					<div class="card mb-3" style="max-width: 630px;">
+						<div class="row g-0">
+							<div class="col-md-4">
 
-{% endfor %}
+								<a href="{{ path ('app_plat', {plat_id: plat.id}) }}">
+									<img src="{{ asset ('/img/food/' ~ plat.image) }}" class="img-fluid rounded-start border border-dark border-4" id="imageTouslesPlats" alt="{{ plat.libelle }}">
+								</a>
+							</div>
 
+							<div class="col-md-8 cardscolor">
+								<div class="card-body">
+									<h5 class="card-title txtcolor">{{ plat.libelle }}</h5>
+									<p class="card-text txtcolor">{{ plat.description }}</p>
+									<p class="card-text txtcolor">Prix :
+										<b>{{ plat.prix }}€</b>
+									</p>
+									<div class="d-flex justify-content-end">
+										<button type="submit" name="comm" class="btn btn-primary" value="' . $row['id'] . '" id="boutoncommander">Commander</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			{% endfor %}
+
+		</div>
+	</div>
 
 {% endblock %}
