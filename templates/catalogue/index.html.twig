@@ -7,7 +7,7 @@
 
 	<div class="container">
 		<div class="row g-0">
-			<video src="/img/852299-hd_1280_720_30fps.mp4" loop autoplay muted alt="video_pizza" title="bandereau" id="video" class="object-fit-cover"></div>
+			<video src="{{ asset ('/img/852299-hd_1280_720_30fps.mp4/') }}" loop autoplay muted alt="video_pizza" title="bandereau" id="video"></div>
 		</div>
 
 		<div class="container">
@@ -25,19 +25,31 @@
 							<div class="col-sm-12 col-lg-4">
 								<a href="{{ path ('app_platcat', {categorie_id: categorie.id} ) }}">
 									<img src="{{ asset ('/img/category/' ~ categorie.image) }}" class="animeimage posImage" alt="{{ categorie.libelle }}">
-                                    <div class="row justify-content-center">
-									<p class="pCouleurtxt col-7">{{ categorie.libelle }}</p>
-                                    </div>
+									<div class="row justify-content-center">
+										<p class="pCouleurtxt col-7">{{ categorie.libelle }}</p>
+									</div>
 								</a>
 							</div>
 
 						{% endfor %}
 
-                        
+						<div class="backgroundTitle mb-3 mt-5">
+							<h1>Les plats les plus populaires</h1>
+						</div>
 
+						{% for plat in plats %}
 
+							<div class="col-sm-12 col-lg-4">
+								<a href="#">
+									<img src="{{ asset ('/img/food/' ~ plat.image) }}" class="animeimage posImage" alt="' . $row['libelle'] . '">
+									<div class="row justify-content-center">
+										<p class="pCouleurtxt col-7">{{ plat.libelle }}</p>
+									</div>
+									<div class="card-body"></div>
+								</a>
+							</div>
 
-
+						{% endfor %}
 
 
 					</div>

@@ -50,7 +50,7 @@ class CatalogueController extends AbstractController
     {
         $categorie = $this->categorieRepository->find($categorie_id);
         $plats = $this->platRepository->findBy(['categorie' => $categorie->getId()]);
-        return $this->render('catalogue/plat.html.twig', [
+        return $this->render('catalogue/platsparcategorie.html.twig', [
             'controller_name' => 'CatalogueController',
             'plats' => $plats,
             'categorie' => $categorie

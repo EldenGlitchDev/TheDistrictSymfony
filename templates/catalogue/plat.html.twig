@@ -16,14 +16,16 @@
 
 			{% for plat in plats %}
 
+
 				<div class="col-md-6">
 					<div class="card mb-3" style="max-width: 630px;">
 						<div class="row g-0">
 							<div class="col-md-4">
 
-								
-									<img src="{{ asset ('/img/food/' ~ plat.image) }}" class="img-fluid rounded-start border border-dark border-4" id="imageTouslesPlats" alt="{{ plat.libelle }}">
-								
+
+								<img src="{{ asset ('/img/food/' ~ plat.image) }}" class="img-fluid rounded-start border border-dark border-4" id="imageTouslesPlats" alt="{{ plat.libelle }}">
+
+
 							</div>
 
 							<div class="col-md-8 cardscolor">
@@ -34,7 +36,7 @@
 										<b>{{ plat.prix }}€</b>
 									</p>
 									<div class="d-flex justify-content-end">
-										<button type="submit" name="comm" class="btn btn-primary" value="' . $row['id'] . '" id="boutoncommander">Commander</button>
+										<button type="submit" name="comm" class="btn btn-primary" value="#" id="boutoncommander">Ajouter au panier</button>
 									</div>
 								</div>
 							</div>
