@@ -73,6 +73,7 @@ class CatPlats extends Fixture
         $platPizzaBianca->setPrix("14.00");
         $platPizzaBianca->setImage("pizza-salmon.png");
         $platPizzaBianca->setActive("Yes");
+        $platPizzaBianca->setCategorie($categoriePizza);
         $manager->persist($platPizzaBianca);
 
         // Pizza Margherita
@@ -83,6 +84,7 @@ class CatPlats extends Fixture
         $platPizzaMargherita->setPrix("14.00");
         $platPizzaMargherita->setImage("pizza-margherita.jpg");
         $platPizzaMargherita->setActive("Yes");
+        $platPizzaMargherita->setCategorie($categoriePizza);
         $manager->persist($platPizzaMargherita);
 
         // District Burger
@@ -93,6 +95,7 @@ class CatPlats extends Fixture
         $platDistrictBurger->setPrix("8.00");
         $platDistrictBurger->setImage("hamburger.jpg");
         $platDistrictBurger->setActive("Yes");
+        $platDistrictBurger->setCategorie($categorieBurger);
         $manager->persist($platDistrictBurger);
 
         // Cheesburger
@@ -103,6 +106,7 @@ class CatPlats extends Fixture
         $platCheesburger->setPrix("8.00");
         $platCheesburger->setImage("cheesburger.jpg");
         $platCheesburger->setActive("Yes");
+        $platCheesburger->setCategorie($categorieBurger);
         $manager->persist($platCheesburger);
 
         // Buffalo Chicken Wrap
@@ -113,6 +117,7 @@ class CatPlats extends Fixture
         $platBuffaloChickenWrap->setPrix("5.00");
         $platBuffaloChickenWrap->setImage("buffalo-chicken.webp");
         $platBuffaloChickenWrap->setActive("Yes");
+        $platBuffaloChickenWrap->setCategorie($categorieWraps);
         $manager->persist($platBuffaloChickenWrap);
 
         // Spaghetti aux légumes
@@ -123,6 +128,7 @@ class CatPlats extends Fixture
         $platSpaghettiLegumes->setPrix("10.00");
         $platSpaghettiLegumes->setImage("spaghetti-legumes.jpg");
         $platSpaghettiLegumes->setActive("Yes");
+        $platSpaghettiLegumes->setCategorie($categoriePasta);
         $manager->persist($platSpaghettiLegumes);
 
         // Lasagnes
@@ -133,6 +139,7 @@ class CatPlats extends Fixture
         $platsLasagnes->setPrix("12.00");
         $platsLasagnes->setImage("lasagnes_viande.jpg");
         $platsLasagnes->setActive("Yes");
+        $platsLasagnes->setCategorie($categoriePasta);
         $manager->persist($platsLasagnes);
 
         // Tagliatelles au saumon
@@ -143,6 +150,7 @@ class CatPlats extends Fixture
         $platsTagliatellesSaumon->setPrix("12.00");
         $platsTagliatellesSaumon->setImage("tagliatelles_saumon.webp");
         $platsTagliatellesSaumon->setActive("Yes");
+        $platsTagliatellesSaumon->setCategorie($categoriePasta);
         $manager->persist($platsTagliatellesSaumon);
 
         // Salade César
@@ -153,6 +161,7 @@ class CatPlats extends Fixture
         $platsSaladeCesar->setPrix("7.00");
         $platsSaladeCesar->setImage("cesar_salad.jpg");
         $platsSaladeCesar->setActive("Yes");
+        $platsSaladeCesar->setCategorie($categorieSalade);
         $manager->persist($platsSaladeCesar);
 
 
