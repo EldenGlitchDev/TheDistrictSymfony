@@ -217,7 +217,7 @@ h1{
 
 /*PLATS PAR CATEGORIES*/
 
-/*#titre{
+#titre{
     background-color: #62426D;
     border:2px solid;
     border-radius: 8px;
@@ -228,15 +228,15 @@ h1{
     font-size: 23px;
 }
 
-#boutoncommander{
+/*#boutoncommander{
     margin-top: 40px;
     margin-left: 100px;
-}
+}*/
 
 .titreconteneur{
     width:2000px;
   min-height:15px;
-}*/
+}
 
 
 /*MENTIONS LEGALES ET POLITIQUE DE CONFIDENTIALITE*/
@@ -244,7 +244,7 @@ h1{
 /*body{
     background-color: #29334B;
 
-}
+}*/
 
 .paragraphePolMen, .listePolMen{
     color:#E3A592;
@@ -267,4 +267,4 @@ hr{
 
 .titrePolMen{
     color:#E3A592;
-}*/
+}

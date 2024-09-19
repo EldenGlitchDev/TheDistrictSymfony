@@ -1,39 +1,54 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Plats par catégorie{% endblock %}
+{% block title %}
+	{{ categorie.libelle }}
+{% endblock %}
 
 {% block body %}
 
-<div class="container">
+	<div class="container">
 		<div class="row g-0">
-			<img src="/img/bg1.jpeg" alt="bandereau" title="bandereau" id="imageBandereau">
+			<img src="{{ asset ('img/bg1.jpeg') }}" alt="bandereau" title="bandereau" id="imageBandereau">
 		</div>
 	</div><br>
 
-{% for plat in plats %}
-
-<div class=container>
-  <div class="row justify-content-center g-0">
-  <div class="card mb-3" style="max-width: 1000px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{{ asset ('/img/food/' ~ plat.image) }}" class="img-fluid rounded-start border border-dark border-4 imageComm" alt="{{ plat.libelle }}">
-      </div>
-      <div class="col-md-8 cardscolor">
-        <div class="card-body">
-          <h5 class="card-title txtcolor">{{ plat.libelle }}</h5>
-          <p class="card-text txtcolor">{{ plat.description }}</p>
-          <p class="card-text txtcolor">Prix :<b>{{ plat.prix }} €</b></p>
-          <div class="d-flex justify-content-end">
-            <div class="d-flex justify-content-end">
-				<button type="submit" name="comm" class="btn btn-primary" value="#" id="boutoncommander">Commander</button>
+	<div class="container">
+		<div class="row justify-content-start titreconteneur">
+			<div class="col-6 col-lg-1 mb-5" id="titre">
+				<h3>{{ categorie.libelle }}</h3>
 			</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div></div><div>
+		</div>
+	</div>
 
-  {% endfor %}
+	{% for plat in plats %}
 
-{% endblock %}
+
+		<div class="container">
+			<div class="row justify-content-center g-0">
+				<div class="card mb-3" style="max-width: 1000px;">
+					<div class="row g-0">
+						<div class="col-md-4">
+							<img src="{{ asset ('/img/food/' ~ plat.image) }}" class="img-fluid rounded-start border border-dark border-4 imageComm" alt="{{ plat.libelle }}">
+						</div>
+						<div class="col-md-8 cardscolor">
+							<div class="card-body">
+								<h5 class="card-title txtcolor">{{ plat.libelle }}</h5>
+								<p class="card-text txtcolor">{{ plat.description }}</p>
+								<p class="card-text txtcolor">Prix :<b>{{ plat.prix }}
+										€</b>
+								</p>
+								<div class="d-flex justify-content-end">
+									<div class="d-flex justify-content-end">
+										<button type="submit" name="comm" class="btn btn-primary" value="#" id="boutoncommander">Ajouter au panier</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+
+			{% endfor %}
+
+		{% endblock %}
