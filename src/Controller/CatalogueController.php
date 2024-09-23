@@ -81,13 +81,13 @@ class CatalogueController extends AbstractController
 
     #Route temporaire pour le panier
 
-    #[Route('/panier', name: 'app_panier')]
+    /* #[Route('/panier', name: 'app_panier')]
     public function panier(): Response
     {
         return $this->render('catalogue/panier.html.twig', [
             'controller_name' => 'PanierController',
         ]);
-    }
+    }*/
 
     #Route pour mentions légales
 

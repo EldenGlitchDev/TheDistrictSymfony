@@ -39,7 +39,10 @@
 								</p>
 								<div class="d-flex justify-content-end">
 									<div class="d-flex justify-content-end">
-										<button type="submit" name="comm" class="btn btn-primary" value="#" id="boutoncommander">Ajouter au panier</button>
+										
+									<a href="{{ path("add_plat", {id: plat.id}) }}" id="boutoncommander">
+										Ajouter au panier
+									</a>
 									</div>
 								</div>
 							</div>
