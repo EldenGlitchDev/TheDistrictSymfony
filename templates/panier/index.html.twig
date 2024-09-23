@@ -17,9 +17,9 @@
 
 	<h2><b>Votre panier</b></h2>
 
-{% for plat in plats %}
+{% for element in dataPanier %}
 
-	{{ plat.libelle }}
+	{{ element.plat.libelle }}
 
 {% endfor %}
 
