@@ -5,25 +5,33 @@
 
 {% block body %}
 
-	<div class="container">
-		<div class="row g-0">
-			<img src="{{ asset ('img/bg1.jpeg') }}" alt="bandereau" title="bandereau" id="imageBandereau">
+	<section>
+		<div class="container">
+			<div class="row">
+				<p id="votrePanier">Votre panier :</p>
+			</div>
 		</div>
-	</div><br>
+		<div class="container">
+			<div class="row g-0">
+				<img src="{{ asset ('/img/bg.jpg') }}" alt="bandereau" title="bandereau" id="imageBandereauPanier">
+
+			</div>
+		</div>
+	</section>
+	<br>
 
 
-<div class="container">
-<div class="row">
+	<div class="container">
+		<div class="row">
 
-	<h2><b>Votre panier</b></h2>
 
-{% for element in dataPanier %}
+			{% for element in dataPanier %}
 
-	{{ element.plat.libelle }}
+				{{ element.plat.libelle }}
 
-{% endfor %}
+			{% endfor %}
 
-</div>
-</div>
+		</div>
+	</div>
 
 {% endblock %}
