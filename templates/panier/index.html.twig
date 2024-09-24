@@ -22,15 +22,30 @@
 
 
 	<div class="container">
-		<div class="row">
+		<div class="row col-12">
 
 
 			{% for element in dataPanier %}
 
-				{{ element.plat.libelle }}
+				<table class="table table-bordered mx-2">
+
+					<tbody>
+						<tr>
+							<td class="couleurTxtPanier col-6"><b>{{ element.plat.libelle }}</b></td>
+							<td class="couleurTxtPanier col-6">
+								<b>Prix : {{ element.plat.prix }}€</b>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
 
 			{% endfor %}
 
+				<a class="nav-link" aria-current="page" href="{{ path('app_commande') }}">Passer la commande</a>
+
+				<a class="nav-link" aria-current="page" href="{{ path('app_supprimer_tout_panier') }}">Vider la panier</a>
 		</div>
 	</div>
 
