@@ -31,10 +31,11 @@
 
 					<tbody>
 						<tr>
-							<td class="couleurTxtPanier col-6"><b>{{ element.plat.libelle }}</b></td>
-							<td class="couleurTxtPanier col-6">
+							<td class="couleurTxtPanier col-5"><b>{{ element.plat.libelle }}</b></td>
+							<td class="couleurTxtPanier col-5">
 								<b>Prix : {{ element.plat.prix }}€</b>
 							</td>
+							<td class="col-1"><a href="{{ path('app_enlever_panier', {id: element.id}) }}"><img src="{{ asset ('img/Icones/iconeDelete.png') }}" alt="iconeDelete" id="iconeDelete"></a></td>
 						</tr>
 					</tbody>
 				</table>

@@ -297,3 +297,9 @@ hr{
 table{
     background-color: #E3A592;
 }
+
+#iconeDelete{
+    width: 27px;
+    height: 27px;
+    margin-left: 33%;
+}
