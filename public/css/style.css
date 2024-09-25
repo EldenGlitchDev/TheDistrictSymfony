@@ -290,7 +290,7 @@ hr{
     border-radius: 30%;
 }
 
-.couleurTxtPanier{
+.TxtPanier{
     color: black;
 }
 
@@ -298,8 +298,9 @@ table{
     background-color: #E3A592;
 }
 
-#iconeDelete{
+#iconesPanier{
     width: 27px;
     height: 27px;
     margin-left: 33%;
 }
+
