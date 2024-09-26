@@ -144,6 +144,16 @@ h1{
 #boutoncommander{
     margin-top: 10px;
     margin-left: 50px;
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:15px;
+    font-weight: bold;
+    text-align: center;
+    filter:drop-shadow(10px 3px 4px #a14529);
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+    border-color: #000000;
 }
 
 #imageTouslesPlats{
@@ -299,8 +309,83 @@ table{
 }
 
 #iconesPanier{
-    width: 27px;
-    height: 27px;
-    margin-left: 33%;
+    width: 45px;
+    height: 45px;
+    margin-left: 25%;
+    margin-top: 25%;
 }
 
+#iconesPlusMoins{
+    width: 35px;
+    height: 35px;
+}
+
+.buttonAutreChose{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:25px;
+    font-weight: bold;
+    text-align: center;
+    filter:drop-shadow(10px 3px 4px #a14529);
+    background-color: black;
+    border-radius: 20px;
+    margin-top: 5px;
+    border-color: #000000;
+}
+
+.TxtpanierVide{
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:50px;
+}
+
+#boutonPasserCommande{
+    max-width: 170px;
+    max-height: 50px;
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:18px;
+    text-align: center;
+    filter:drop-shadow(10px 3px 4px #a14529);
+    background-color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-color: #000000;
+}
+
+#boutonViderPanier{
+    max-width: 170px;
+    max-height: 50px;
+    color:#E3A592;
+    font-family: Georgia, serif;
+    font-size:18px;
+    text-align: center;
+    filter:drop-shadow(10px 3px 4px #a14529);
+    background-color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-color: #000000;
+}
+
+/*.hoverLibelle{
+    position:relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: #360E44;
+}
+
+.hoverLibelle:hover::after{
+    content:'blablabla';
+    color: red;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    background-color: #360E44;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+}*/
