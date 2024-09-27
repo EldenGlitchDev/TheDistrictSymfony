@@ -2,6 +2,17 @@
 
 body{
     background-color: #29334B;
+    cursor: url('/img/cursor/Pizza_Normal_Select.cur'), auto;
+}
+
+a{
+    text-decoration: none;
+    color:#E3A592;
+    cursor: url('/img/cursor/Pizza_link_select.cur'), auto;
+}
+
+.btn{
+    cursor: url('/img/cursor/kawaii_burger.cur'), auto;
 }
 
 /*.boutonderoulant{
@@ -96,10 +107,7 @@ body{
     margin-right: auto;
 }
 
-a{
-    text-decoration: none;
-    color:#E3A592;
-}
+
 
 h1{
     text-align: center;
@@ -308,7 +316,7 @@ table{
     background-color: #E3A592;
 }
 
-#iconesPanier{
+.iconeDeleteCSS{
     width: 45px;
     height: 45px;
     margin-left: 25%;
@@ -389,3 +397,43 @@ table{
     border-radius: 5px;
     margin-top: 5px;
 }*/
+
+/*.infobulle{
+    position:relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.infobulle .infobulleTxt{
+    visibility: hidden;
+    width: 120px;
+    background-color: #360E44;
+    color: #E3A592;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.infobulle:hover .infobulleTxt{
+    visibility: visible;
+    opacity: 1;
+}
+
+.infobulle .infobulleTxt::after{
+    content: 'blabla';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}*/
+

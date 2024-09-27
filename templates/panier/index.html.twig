@@ -32,7 +32,7 @@
 
 					<tbody>
 						<tr>
-							<td class="TxtPanier col-5 text-center align-middle hoverLibelle" title="{{ element.plat.description }}">
+							<td class="TxtPanier col-5 text-center align-middle infobulle infobulleTxt" title="{{ element.plat.description }}">
 								<b>{{ element.plat.libelle }}
 									({{ element.plat.prix }}€)</b>
 							</td>
@@ -47,7 +47,7 @@
 									{{ element.plat.prix * element.quantite }}€</b>
 							</td>
 							<td class="col-2">
-								<a href="{{ path('app_supprimer_panier', {id:element.plat.id}) }}"><img src="{{ asset ('img/Icones/iconeDelete.png') }}" alt="iconeDelete" id="iconesPanier"></a>
+								<a href="{{ path('app_supprimer_panier', {id:element.plat.id}) }}"><img src="{{ asset ('img/Icones/iconeDelete.png') }}" alt="iconeDelete" class="iconeDeleteCSS" id="iconeDeleteJS"></a>
 							</td>
 						</tr>
 					</tbody>
