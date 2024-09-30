@@ -40,7 +40,7 @@
 						{% for plat in plats %}
 
 							<div class="col-sm-12 col-lg-4">
-								<a href="#">
+								<a href="{{ path("app_ajout_panier", {id: plat.id}) }}">
 									<img src="{{ asset ('/img/food/' ~ plat.image) }}" class="animeimage posImage" alt="' . $row['libelle'] . '">
 									<div class="row justify-content-center">
 										<p class="pCouleurtxt col-7">{{ plat.libelle }}</p>
