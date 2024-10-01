@@ -15,7 +15,7 @@ class CommandeManager
     public function __construct(EntityManagerInterface $em, EventDispatcherInterface $eventDispatcherInterface)
     {
         $this->em = $em;
-        $this->eventDispatcherInterface->$eventDispatcherInterface;
+        $this->eventDispatcherInterface=$eventDispatcherInterface;
     }
 
     public function setCommande($commande)

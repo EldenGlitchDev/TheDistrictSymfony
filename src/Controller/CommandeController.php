@@ -39,15 +39,19 @@ class CommandeController extends AbstractController
             $panier = $this->ps->ShowPanier();
 
             if (!empty($panier)){
-                $this->denyAccessUnlessGranted('ROLE_CLIENT');
+                //$this->denyAccessUnlessGranted('ROLE_CLIENT');
                 $user=$this->getUser();
                 $form=$this->createForm(CommandeType::class, $user);
+                $form->handleRequest($request);
+
+
+                $commande = new Commande();
+                $form = $this->createForm(CommandeType::class, $commande);
                 $form->handleRequest($request);
 
                     if ($form->isSubmitted() && $form->isValid()){
                         $total=$this->ps->getTotal();
 
-                        $commande = new Commande();
                         $commande->setDateCommande(new \DateTimeImmutable());
                         $commande->setTotal($total);
                         $commande->setEtat(0);
@@ -74,8 +78,9 @@ class CommandeController extends AbstractController
                         ]);
                     }
 
-                    }else{
+                   }else{
                         return $this->redirectToRoute('app_panier');
                     }
             }
         }
+    
