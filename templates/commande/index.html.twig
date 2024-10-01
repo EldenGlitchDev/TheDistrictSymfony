@@ -1,22 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Votre commande{% endblock %}
+{% block title %}Votre commande
+{% endblock %}
 
 {% block body %}
 
-<div class="container">
+	<div class="container">
 		<div class="row g-0">
 			<img src="{{ asset ('img/bg1.jpeg') }}" alt="bandereau" title="bandereau" id="imageBandereau">
 		</div>
 	</div>
 
-			<section class="container" id="background-img">
-				<div class="row g-0">
+	<section class="container" id="background-img">
+		<div class="row g-0">
 
-<div class="container">
+			<div class="container">
 				<div class="row">
 
-				
 
 					<p class="row g-0 mt-5 pt-5 mx-3 justify-content-start" id="champsObl">Les champs ayant une "*" sont obligatoires à remplir !</p>
 
@@ -43,8 +43,18 @@
 					</div>
 
 					<div class="row mx-1 fs-5 col-12 text-center">
-						{{ form_label(form.adresse) }}
-						{{ form_widget(form.adresse) }}
+						{{ form_label(form.adresse_facturation) }}
+						{{ form_widget(form.adresse_facturation) }}
+					</div>
+
+					<div class="row mx-1 fs-5 col-12 text-center">
+						{{ form_label(form.adresse_livraison) }}
+						{{ form_widget(form.adresse_livraison) }}
+					</div>
+
+					<div class="row mx-1 fs-5 col-12 text-center">
+						{{ form_label(form.mode_paiement) }}
+						{{ form_widget(form.mode_paiement) }}
 					</div>
 
 					<div class="container">
@@ -63,9 +73,7 @@
 			{{ form_end(form) }}
 
 
-
-
-</div>
-</section>
+		</div>
+	</section>
 
 {% endblock %}
