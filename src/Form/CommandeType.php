@@ -56,8 +56,7 @@ class CommandeType extends AbstractType
                 'choices' => [
                     'Visa' => 'Visa',
                     'MasterCard' => '<i class="fa fa-cc-mastercard"></i> MasterCard',
-                    'Paypal' => 'Paypal',
-                    'American Express' => 'American Express',
+                    'Paypal' => '<i class="fa-brands fa-paypal fa-beat-fade"></i> Paypal',
                 ],
                 'expanded' => false, // The expanded option is set to false to render the choices as a dropdown menu instead of a list of radio buttons or checkboxes
 

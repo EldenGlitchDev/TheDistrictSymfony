@@ -228,6 +228,15 @@ h1{
     margin-top: 20px;
 }*/
 
+.backgroundTitleCommande{
+    background-color: white;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #E3A592, white);
+    height: 30px;
+    align-items: center;
+    display: flex;
+}
+
 .imageComm{
     width: 1320px;
     height: 320px;
