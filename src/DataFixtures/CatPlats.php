@@ -6,9 +6,22 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Categorie;
 use App\Entity\Plat;
+use App\Entity\User;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class CatPlats extends Fixture
 {
+
+    private $passwordHasher;
+
+    public function __construct(UserPasswordHasherInterface $passwordHasher)
+    {
+        $this->passwordHasher=$passwordHasher;
+    }
+
+
+
     public function load(ObjectManager $manager): void
     {
                     /* CATEGORIES */
@@ -163,6 +176,56 @@ class CatPlats extends Fixture
         $platsSaladeCesar->setActive("Yes");
         $platsSaladeCesar->setCategorie($categorieSalade);
         $manager->persist($platsSaladeCesar);
+
+
+                    /* UTILISATEURS */
+
+        // Utilisateur 1
+
+        $user1 = new User();
+        $user1->setEmail('emailUtil1@gmail.com');
+        $user1->setPassword('hihi');
+
+        $Password='hihi';
+        $hashedPassword = $this->passwordHasher->hashPassword(
+            $user1,
+            $Password
+        );
+
+        $user1->setPassword($hashedPassword);
+        $user1->setNom('Jean');
+        $user1->setPrenom('Pierre');
+        $user1->setCp('75000');
+        $user1->setVille('Paris');
+        $user1->setAdresse('12 rue de la paix');
+        $user1->setTelephone('0123456789');
+        $user1->setRoles(['ROLE_ADMIN']);
+
+        $manager->persist($user1);
+
+
+        // Utilisateur 2
+
+        $user2 = new User();
+        $user2->setEmail('emailUtil2@gmail.com');
+        $user2->setPassword('hoho');
+
+        $Password='hoho';
+        $hashedPassword = $this->passwordHasher->hashPassword(
+            $user2,
+            $Password
+        );
+
+        $user2->setPassword($hashedPassword);
+        $user2->setNom('Bruno');
+        $user2->setPrenom('Sapristi');
+        $user2->setCp('80000');
+        $user2->setVille('Amiens');
+        $user2->setAdresse('66 rue de la guerre');
+        $user2->setTelephone('0189745621');
+        $user2->setRoles(['ROLE_CHEF']);
+
+        $manager->persist($user2);
 
 
         $manager->flush(); //génération du code SQL pour mettre à jour la BDD
