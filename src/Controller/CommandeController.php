@@ -41,8 +41,8 @@ class CommandeController extends AbstractController
             if (!empty($panier)){
                 //$this->denyAccessUnlessGranted('ROLE_CLIENT');
                 $user=$this->getUser();
-                $form=$this->createForm(CommandeType::class, $user);
-                $form->handleRequest($request);
+                //$form=$this->createForm(CommandeType::class, $user);
+                //$form->handleRequest($request);
 
 
                 $commande = new Commande();
@@ -69,7 +69,7 @@ class CommandeController extends AbstractController
 
                         $entityManager->flush();
                         $this->ps->DeleteAllPlat();
-                        $this->addFlash('success','Vous allez être livré sous peu');
+                        //$this->addFlash('success','Vous allez être livré sous peu');
 
                         return $this->redirectToRoute('app_index');
                     }else{

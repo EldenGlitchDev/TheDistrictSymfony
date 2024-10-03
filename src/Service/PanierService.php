@@ -50,6 +50,19 @@ class PanierService
         return $total;
     }
 
+    /*public function getTotal(): int
+{
+    $panier = $this->ShowPanier();
+    $total = 0;
+    foreach($panier as $id => $quantite){
+        $plat = $this->PlatRepository->find($id);
+        if ($plat !== null) {
+            $total += $plat->getPrix() * $quantite;
+        }
+    }
+    return $total;
+}*/
+
     public function AddPlat(Plat $plat): void
     {
         $session = $this->requestStack->getSession();
