@@ -39,7 +39,7 @@ class CommandeController extends AbstractController
             $panier = $this->ps->ShowPanier();
 
             if (!empty($panier)){
-                //$this->denyAccessUnlessGranted('ROLE_CLIENT');
+                $this->denyAccessUnlessGranted('ROLE_CLIENT');
                 $user=$this->getUser();
                 //$form=$this->createForm(CommandeType::class, $user);
                 //$form->handleRequest($request);
