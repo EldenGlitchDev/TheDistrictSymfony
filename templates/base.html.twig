@@ -25,6 +25,7 @@
 								<a class="nav-link mx-4 px-2 couleurbouton" aria-current="page" href="{{ path('app_categorie') }}">Catégorie</a>
 								<a class="nav-link mx-4 px-2 couleurbouton" aria-current="page" href="{{ path('app_plat') }}">Plats</a>
 								<a class="nav-link mx-4 px-2 couleurbouton" href="{{ path('app_contact') }}">Contact</a>
+
 								<a class="nav-link mx-4 px-2 couleurbouton" href="{{ path('app_panier') }}" id="panier-link">
 
 									<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
@@ -35,9 +36,9 @@
 
 								<script>
 									fetch('{{ path("app_panier_nombre") }}').then(response => response.json()).then(data => {
-document.getElementById('nombre-items').textContent = `(${
+document.getElementById('nombre-items').textContent = `${
 data.nombreItems
-})`;
+}`;
 });
 								</script>
 

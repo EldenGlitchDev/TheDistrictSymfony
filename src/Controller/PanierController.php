@@ -63,7 +63,8 @@ class PanierController extends AbstractController
     public function NombreItemsPanier(): Response
     {
         $nombreItems = $this->PS->getNombreItems();
-        return new JsonResponse (['nombreItems' => $nombreItems]);
+        $nombreArticles = $this->PS->getNombreArticles();
+        return new JsonResponse (['nombreItems' => $nombreItems, 'nombreArticles' => $nombreArticles]);
     }
 
 }

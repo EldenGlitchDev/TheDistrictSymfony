@@ -114,8 +114,17 @@ class PanierService
     public function getNombreItems()
     {
         $panier = $this->ShowPanier();
-        $nombreItems = count($panier);
+        $nombreItems = 0;
+        foreach($panier as $quantite){
+            $nombreItems += $quantite;
+        }
         return $nombreItems;
+    }
+
+    public function getNombreArticles()
+    {
+        $panier = $this->ShowPanier();
+        return count($panier);
     }
 
 }
