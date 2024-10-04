@@ -26,14 +26,10 @@
 								<a class="nav-link mx-4 px-2 couleurbouton" aria-current="page" href="{{ path('app_plat') }}">Plats</a>
 								<a class="nav-link mx-4 px-2 couleurbouton" href="{{ path('app_contact') }}">Contact</a>
 
-								<a class="nav-link mx-4 px-2 couleurbouton" href="{{ path('app_panier') }}" id="panier-link">
-
+								<a class="nav-link mx-4 px-2 iconeBouton" href="{{ path('app_panier') }}" id="panier-link">
 									<i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-
 									<span id="nombre-items"></span>
-
 								</a>
-
 								<script>
 									fetch('{{ path("app_panier_nombre") }}').then(response => response.json()).then(data => {
 document.getElementById('nombre-items').textContent = `${
@@ -42,21 +38,18 @@ data.nombreItems
 });
 								</script>
 
-								<!--a class="nav-link mx-4 px-2 couleurbouton"><i class="fa-solid fa-cart-plus" style="color: #ffffff;"></i></a-->
-
-
 								{% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN') or is_granted('ROLE_CHEF') %}
 
-									<a class="nav-link mx-4 px-4 couleurbouton" href="{{ path('app_login') }}">
+									<a class="nav-link mx-5 px-4 couleurbouton" href="{{ path('app_login') }}">
 										<i class="fa-solid fa-user" style="color: #26a269;" title="Connected" alt="connected"></i>
 									</a>
-									<a class="nav-link mx-4 px-2 couleurbouton" href="{{ path('app_logout') }}">
+									<a class="nav-link mx-2 px-2 couleurbouton" href="{{ path('app_logout') }}">
 										<i class="fa-solid fa-right-from-bracket" style="color: #e01b24;" title="Logout" alt="logout"></i>
 									</a>
 
 								{% else %}
 
-									<a class="nav-link mx-4 px-4 couleurbouton" href="{{ path('app_login') }}">
+									<a class="nav-link mx-5 px-4 couleurbouton" href="{{ path('app_login') }}">
 										<i class="fa-solid fa-user" style="color: #e01b24;" title="Disconnected" alt="disconnected"></i>
 									</a>
 

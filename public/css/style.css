@@ -15,6 +15,12 @@ a{
     cursor: url('/img/cursor/kawaii_burger.cur'), auto;
 }
 
+.iconeBouton{
+    font-size: 30px;
+    color:#E3A592;
+    font-weight: 500;
+}
+
 /*.boutonderoulant{
     background-color: #E3A592;
 }*/
