@@ -7,8 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Service\PanierService;
 use App\Entity\Plat;
-
-
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class PanierController extends AbstractController
 {
@@ -60,5 +59,11 @@ class PanierController extends AbstractController
         return $this->redirectToRoute("app_panier");
     }
 
+    #[Route('/panier/nombre', name: 'app_panier_nombre')]
+    public function NombreItemsPanier(): Response
+    {
+        $nombreItems = $this->PS->getNombreItems();
+        return new JsonResponse (['nombreItems' => $nombreItems]);
+    }
 
 }

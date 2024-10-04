@@ -111,4 +111,11 @@ class PanierService
         $session->set('panier', []);
     }
 
+    public function getNombreItems()
+    {
+        $panier = $this->ShowPanier();
+        $nombreItems = count($panier);
+        return $nombreItems;
+    }
+
 }
