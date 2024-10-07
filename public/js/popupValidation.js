@@ -1,51 +1,39 @@
-/*const deleteButton = document.getElementById("iconeDeleteJS");
-deleteButton.addEventListener("click", function() {
-    Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success"
-          });
-        }
-      });
-  console.log("Button clicked!");
-});*/
+// Non utilisé pour le moment
 
 document.addEventListener("DOMContentLoaded", function() {
-    
-    const deleteButton = document.getElementById("iconeDeleteJS");
-    console.log(deleteButton);
-    deleteButton.addEventListener("click", function() {
-  
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-              });
-            }
-          });
-  
+  const deleteButton = document.getElementById("iconeDeleteJS");
+  deleteButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+          if (result.isConfirmed) {
+              // Add the code to delete the article here
+              fetch("{{ path('app_supprimer_panier', {id: element.plat.id}) }}", 
+                {
+                  method: 'POST',
+                  headers: {
+                      "X-Requested-With": XMLHttpRequest
+                  }
+              })
+              .then(response => response.json())
+              .then(data => {
+                  console.log(data);
+                  // Update the UI to reflect the deletion
+                  // For example, you can remove the table row
+                  // that corresponds to the deleted article
+                  const tableRow = event.target.closest('tr');
+                  tableRow.remove();
+              })
+              .catch(error => console.error(error));
+          }
+      });
       console.log("Button clicked!");
-  
-    });
-  
   });
+});
