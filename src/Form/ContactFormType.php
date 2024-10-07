@@ -19,30 +19,37 @@ class ContactFormType extends AbstractType
             ->add('nom', TextType::class, [
                 'required' => true,
                 'label' => 'Nom*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
                 ])
             ->add('prenom', TextType::class, [
                 'required' => false,
                 'label' => 'Prénom',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('email', EmailType::class, [
                 'required' => true,
                 'label' => 'Email*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('telephone', TextType::class, [
                 'required' => true,
                 'label' => 'Téléphone*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('demande', TextareaType::class, [
                 'required' => true,
                 'label' => 'Votre demande*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('envoyer', SubmitType::class, [
-                'label' => 'Envoyer'])
+                'label' => 'Envoyer',
+                'attr' => ['class' => 'btn btn-primary col-2 mb-4']
+                ])
 
         ;
     }

@@ -23,32 +23,38 @@ class CommandeType extends AbstractType
             ->add('nom', TextType::class, [
                 'required' => true,
                 'label' => 'Nom*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('prenom', TextType::class, [
                 'required' => false,
                 'label' => 'Prénom',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('email', EmailType::class, [
                 'required' => true,
                 'label' => 'Email*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('telephone', TextType::class, [
                 'required' => true,
                 'label' => 'Téléphone*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('adresse_facturation', TextareaType::class, [
                 'required' => true,
                 'label' => 'Adresse de facturation*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('adresse_livraison', TextareaType::class, [
                 'required' => true,
                 'label' => 'Adresse de livraison*',
-                'label_attr' => ['id' => 'label_form']
+                'label_attr' => ['id' => 'label_form'],
+                'attr' => ['class' => 'form-label col-12']
             ])
             ->add('mode_paiement', ChoiceType::class, [
                 'required' => true,
@@ -70,7 +76,8 @@ class CommandeType extends AbstractType
                 'label_attr' => ['id' => 'label_form']
             ])*/
             ->add('envoyer', SubmitType::class, [
-                'label' => 'Envoyer'
+                'label' => 'Envoyer',
+                'attr' => ['class' => 'btn btn-primary col-2 mb-4']
             ])
         ;
     }

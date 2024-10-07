@@ -200,8 +200,10 @@ h1{
 }
 
 #champsObl{
-    color:red;
+    color:#E3A592;
     font-size: 20px;
+    font-family: Georgia, serif;
+    font-weight: bold;
 }
 
 /*COMMANDE*/
@@ -213,15 +215,15 @@ h1{
     height: auto;
     width: 700px;
     
-}
+}*/
 
-.coordonneesCSS{
+/*.coordonneesCSS{
     font-family: Georgia, serif;
     font-size:20px;
     font-weight: bold;
-}
+}*/
 
-.quantite{
+/*.quantite{
     margin-left: 487px;
     margin-top: 50px;
     margin-bottom: 0px;
