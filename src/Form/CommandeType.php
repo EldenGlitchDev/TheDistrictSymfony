@@ -6,6 +6,7 @@ use App\Entity\Commande;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -58,11 +59,16 @@ class CommandeType extends AbstractType
                     'MasterCard' => 'MasterCard',
                     'Paypal' => 'Paypal',
                 ],
-                'expanded' => false, // The expanded option is set to false to render the choices as a dropdown menu instead of a list of radio buttons or checkboxes
+                'expanded' => false,
 
-                'multiple' => false, // The multiple option is set to false to allow only one option to be selected.
+                'multiple' => false,
                 'placeholder' => 'Sélectionnez un moyen de paiement.'
             ])
+            /*->add('termes_acceptes', CheckboxType::class, [
+                'required' => true,
+                'label' => 'J\'accepte les termes et conditions*',
+                'label_attr' => ['id' => 'label_form']
+            ])*/
             ->add('envoyer', SubmitType::class, [
                 'label' => 'Envoyer'
             ])
