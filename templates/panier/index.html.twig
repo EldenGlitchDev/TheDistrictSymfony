@@ -64,11 +64,11 @@
 								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								Êtes-vous sûr de vouloir supprimer cet article du panier ?
+								Êtes-vous sûr de vouloir supprimer cet article du panier ? Vous ne voulez pas en rajouter plutôt ?
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-								<button type="button" class="btn btn-danger" id="confirmDelete">Supprimer</button>
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler, j'ai faim</button>
+								<button type="button" class="btn btn-danger" id="confirmDelete">Supprimer, je veux manger autre chose</button>
 							</div>
 						</div>
 					</div>
@@ -141,30 +141,24 @@ window.location.href = '{{ path('app_supprimer_panier', {id: element.plat.id}) }
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Êtes-vous sûr de vouloir vider votre panier ?
+        Vous n'avez déjà plus faim ? :/ Restez avec nous !
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-danger" id="confirmEmptyCart">Vider le panier</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Je reste, j'ai faim</button>
+        <button type="button" class="btn btn-danger" id="confirmEmptyCart">Vider le panier, je vais voir ailleurs :/</button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  // Get the modal window and the empty cart button
   const emptyCartModal = document.getElementById('emptyCartConfirmationModal');
-  const emptyCartButton = document.getElementById('boutonViderPanier'); // Replace with the actual ID of your empty cart button
-
-  // Add an event listener to the empty cart button
+  const emptyCartButton = document.getElementById('boutonViderPanier');
   emptyCartButton.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent the default link behavior
-    emptyCartModal.modal('show'); // Show the modal window
+    e.preventDefault();
+    emptyCartModal.modal('show');
   });
-
-  // Add an event listener to the confirm empty cart button
   document.getElementById('confirmEmptyCart').addEventListener('click', () => {
-    // Perform the empty cart action here
     window.location.href = '{{ path('app_supprimer_tout_panier') }}';
   });
 </script>

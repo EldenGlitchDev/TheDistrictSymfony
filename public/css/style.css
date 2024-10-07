@@ -390,63 +390,16 @@ table{
     border-color: #000000;
 }
 
-/*.hoverLibelle{
-    position:relative;
-    display: inline-block;
-    padding: 10px;
-    background-color: #360E44;
+.modal-content{
+    background-color: #E3A592;
+    color:#000000;
 }
 
-.hoverLibelle:hover::after{
-    content:'blablabla';
-    color: red;
-    position:absolute;
-    top: 100%;
-    left: 0;
-    white-space: nowrap;
-    background-color: #360E44;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 5px;
-}*/
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
-/*.infobulle{
-    position:relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.infobulle .infobulleTxt{
-    visibility: hidden;
-    width: 120px;
-    background-color: #360E44;
-    color: #E3A592;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.infobulle:hover .infobulleTxt{
-    visibility: visible;
-    opacity: 1;
-}
-
-.infobulle .infobulleTxt::after{
-    content: 'blabla';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}*/
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
