@@ -47,11 +47,43 @@
 									{{ element.plat.prix * element.quantite }}€</b>
 							</td>
 							<td class="col-2">
-								<a href="{{ path('app_supprimer_panier', {id:element.plat.id}) }}"><img src="{{ asset ('img/Icones/iconeDelete.png') }}" alt="iconeDelete" class="iconeDeleteCSS" id="#"></a> <!--id="iconeDeleteJS"-->
+								<a href="#" id="iconeDeleteJS" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">
+									<img src="{{ asset ('img/Icones/iconeDelete.png') }}" alt="iconeDelete" class="iconeDeleteCSS">
+								</a>
 							</td>
 						</tr>
 					</tbody>
 				</table>
+
+				<!-- Fenêtre modale JS qui s'ouvre losqu'on delete un plat -->
+				<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="deleteConfirmationModalLabel">Confirmation de suppression</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								Êtes-vous sûr de vouloir supprimer cet article du panier ?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+								<button type="button" class="btn btn-danger" id="confirmDelete">Supprimer</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					const deleteModal = document.getElementById('deleteConfirmationModal');
+const deleteButton = document.getElementById('iconeDeleteJS');
+deleteButton.addEventListener('click', (e) => {
+e.preventDefault();
+deleteModal.modal('show'); // Montrer la fenêtre modale
+});
+document.getElementById('confirmDelete').addEventListener('click', () => {
+window.location.href = '{{ path('app_supprimer_panier', {id: element.plat.id}) }}';
+});
+				</script>
 
 				{% set totalPrice = totalPrice + (element.plat.prix * element.quantite) %}
 
@@ -98,7 +130,45 @@
 				<div class="row justify-content-center mb-4 mt-2">
 					<a class="btn btn-primary justify-content-start col-9 mx-5 text-center align-middle" aria-current="page" href="{{ path('app_commande') }}" id="boutonPasserCommande">Commander</a>
 
-					<a class="btn btn-primary justify-content-end col-3 mx-5 text-center align-middle" aria-current="page" href="{{ path('app_supprimer_tout_panier') }}" id="boutonViderPanier">Vider le panier</a>
+					<a class="btn btn-primary justify-content-end col-3 mx-5 text-center align-middle" aria-current="page" href="#" id="boutonViderPanier" data-bs-toggle="modal" data-bs-target="#emptyCartConfirmationModal">Vider le panier</a>
+
+<!-- Fenêtre modale JS qui s'ouvre pour vider le panier -->
+<div class="modal fade" id="emptyCartConfirmationModal" tabindex="-1" aria-labelledby="emptyCartConfirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emptyCartConfirmationModalLabel">Confirmation de vidage du panier</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Êtes-vous sûr de vouloir vider votre panier ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-danger" id="confirmEmptyCart">Vider le panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Get the modal window and the empty cart button
+  const emptyCartModal = document.getElementById('emptyCartConfirmationModal');
+  const emptyCartButton = document.getElementById('boutonViderPanier'); // Replace with the actual ID of your empty cart button
+
+  // Add an event listener to the empty cart button
+  emptyCartButton.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent the default link behavior
+    emptyCartModal.modal('show'); // Show the modal window
+  });
+
+  // Add an event listener to the confirm empty cart button
+  document.getElementById('confirmEmptyCart').addEventListener('click', () => {
+    // Perform the empty cart action here
+    window.location.href = '{{ path('app_supprimer_tout_panier') }}';
+  });
+</script>
+
 				</div>
 			</div>
 		</div>

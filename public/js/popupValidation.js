@@ -1,6 +1,6 @@
 // Non utilisé pour le moment
 
-document.addEventListener("DOMContentLoaded", function() {
+/*document.addEventListener("DOMContentLoaded", function() {
   const deleteButton = document.getElementById("iconeDeleteJS");
   deleteButton.addEventListener("click", function(event) {
       event.preventDefault();
@@ -36,4 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
       });
       console.log("Button clicked!");
   });
-});
+});*/
+
