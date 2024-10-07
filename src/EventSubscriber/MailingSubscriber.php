@@ -29,7 +29,7 @@ class MailingSubscriber implements EventSubscriberInterface
         ];
 
         $this->mailservice->sendMailCommande(
-            'blabla@mail.com',
+            'thedistrict@laposte.fr',
             $commande->getUtilisateur(),
             'Commande N°' .$commande->getId(),
             CommandeEvent::TEMPLATE_COMMANDE,
