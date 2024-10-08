@@ -206,6 +206,21 @@ h1{
     font-weight: bold;
 }
 
+.class-for-errors{
+    color: rgb(235, 10, 10);
+    font-size: 17px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.containerErrorForm{
+    background: rgb(15,28,210);
+    background: radial-gradient(circle, rgba(15,28,210,1) 0%, rgba(62,62,112,0.6012605725884104) 84%); 
+    border-radius: 20px;
+}
+
 /*COMMANDE*/
 
 /*#rectangleviolet{
@@ -404,6 +419,9 @@ table{
 .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
   }
+
+
+/*Page authentification*/
 
 .txtSignup{
     color: #E3A592;

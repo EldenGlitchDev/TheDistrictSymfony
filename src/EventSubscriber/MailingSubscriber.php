@@ -20,7 +20,7 @@ class MailingSubscriber implements EventSubscriberInterface
     {
         $commande = $event->getCommande();
         $parameters = [
-            "user" => $commande->getUtilisateur(), //peut etre erreur ici
+            "user" => $commande->getUtilisateur(),
             "commande" => $commande,
             "details" => $commande->getDetails(),
             "dateJour" => date("d-m-Y"),
