@@ -253,7 +253,7 @@ h1{
     background-color: white;
     border-radius: 10px;
     background: linear-gradient(to bottom, #E3A592, white);
-    height: 30px;
+    height: 40px;
     align-items: center;
     display: flex;
 }
@@ -265,7 +265,19 @@ h1{
 
 #CGU{
     font-weight: bolder;
-    margin-left: 100px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+#CGUHypertext{
+    color:rgb(235, 10, 10);
+}
+
+#checkboxCGU{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 /*PLATS PAR CATEGORIES*/

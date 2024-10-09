@@ -102,12 +102,13 @@ class CommandeType extends AbstractType
                 'placeholder' => 'Sélectionnez un moyen de paiement.'
             ])
             ->add('check',  CheckboxType::class, [
-                'label' => 'Conditions Générales d\'Utilisation',
+                'label' => 'Accepter les CGU',
                 'attr' => [
                     'class' => 'form-check-input'
                 ],
                 'mapped' => false,
-                'required' => true
+                'required' => true,
+                'label_attr' => ['id' => 'checkboxCGU']
                 
             ])
             ->add('envoyer', SubmitType::class, [
