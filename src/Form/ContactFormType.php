@@ -22,7 +22,7 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Nom*',
                 'label_attr' => ['id' => 'label_form'],
-                'attr' => ['class' => 'form-label col-12'],
+                'attr' => ['class' => 'form-label col-12 rounded-pill'],
                 'constraints' => new Sequentially([
                     new Regex([
                         'pattern' => '/^[a-zA-Z]+$/',
@@ -35,7 +35,7 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Prénom',
                 'label_attr' => ['id' => 'label_form'],
-                'attr' => ['class' => 'form-label col-12'],
+                'attr' => ['class' => 'form-label col-12 rounded-pill'],
                 'constraints' => new Sequentially([
                     new Regex([
                         'pattern' => '/^[a-zA-Z]+$/',
@@ -48,7 +48,7 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Email*',
                 'label_attr' => ['id' => 'label_form'],
-                'attr' => ['class' => 'form-label col-12'],
+                'attr' => ['class' => 'form-label col-12 rounded-pill'],
                 'constraints' => new Sequentially([
                     new Regex([
                         'pattern' => '/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/',
@@ -61,7 +61,7 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Téléphone*',
                 'label_attr' => ['id' => 'label_form'],
-                'attr' => ['class' => 'form-label col-12'],
+                'attr' => ['class' => 'form-label col-12 rounded-pill'],
                 'constraints' => new Sequentially([
                     new Regex([
                         'pattern' => '/^(?:(?:\+|00)33[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})$/',
@@ -74,11 +74,11 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Votre demande*',
                 'label_attr' => ['id' => 'label_form'],
-                'attr' => ['class' => 'form-label col-12']
+                'attr' => ['class' => 'form-label col-12 rounded-pill']
             ])
             ->add('envoyer', SubmitType::class, [
                 'label' => 'Envoyer',
-                'attr' => ['class' => 'btn btn-primary col-2 mb-4']
+                'attr' => ['class' => 'btn btn-primary col-2 mb-4 rounded-pill']
             ])
 
         ;

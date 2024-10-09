@@ -20,12 +20,12 @@
 					<div class="container">
 						<div class="row">
 
-							<p class="row g-0 mt-5 pt-5 mx-3 justify-content-start" id="champsObl">Les champs ayant une "*" sont obligatoires à remplir !</p>
+							<p class="row g-0 mt-5 pt-5 mx-3 justify-content-start" id="champsObl">Les champs ayant une * sont obligatoires à remplir !</p>
 
 							{{ form_start(form) }}
 
-							<div class="container">
-								<div class=" row mb-5 fs-5 col-12 text-center">
+							<div class="container boxCommandeTextType">
+								<div class=" row mb-5 fs-5 col-8 text-center">
 									{{ form_label(form.nom) }}
 									{{ form_widget(form.nom) }}
 									{% if form.nom.vars.errors|length > 0 %}
@@ -54,8 +54,8 @@
 							</div>
 
 
-							<div class="container">
-								<div class=" row mb-5 fs-5 col-12 text-center">
+							<div class="container boxCommandeTextType">
+								<div class=" row mb-5 fs-5 col-8 text-center">
 									{{ form_label(form.email) }}
 									{{ form_widget(form.email) }}
 									{% if form.email.vars.errors|length > 0 %}
@@ -83,13 +83,14 @@
 								</div>
 							</div>
 
-
-							<div class="row mx-1 mb-5 fs-5 col-12 text-center">
+<div class="container boxCommandeTextareaType">
+							<div class="row mx-1 mb-5 fs-5 col-8 text-center">
 								{{ form_label(form.demande) }}
 								{{ form_widget(form.demande) }}
 								<div class="class-for-errors">
 									{{ form_errors(form.demande) }}
 								</div>
+							</div>
 							</div>
 
 							<div class="container">
